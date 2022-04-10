@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Please fill in the following fields:"
+        android:textSize="24dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+        android:textSize="24dp" />
+
+    <EditText
+        android:id="@+id/cwid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CWID"
+        android:textSize="24dp"
+        android:layout_below="@+id/name"
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Priority"
+        android:textSize="24dp"
+        android:layout_below="@+id/cwid"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/major"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Major"
+        android:textSize="24dp"
+        android:layout_below="@+id/priority"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/btnInsert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/major"
+        android:layout_marginTop="30dp"
+        android:background="#FF9800"
+        android:backgroundTint="#FF9800"
+        android:text="Add Student Data"
+        android:textColor="#FFFFFF"
+        android:textSize="24dp"
+        app:iconTint="#FF9800"
+        app:strokeColor="#03A9F4" />
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Update Student Data"
+        android:layout_below="@id/btnInsert"/>
+
+    <Button
+        android:id="@+id/btnRemove"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="Remove Existing Student Data"
+        android:layout_below="@id/btnUpdate"/>
+
+    <Button
+        android:id="@+id/btnView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24dp"
+        android:text="View All Existing Student Data"
+        android:layout_below="@id/btnRemove"/>
+
+
+</RelativeLayout>
